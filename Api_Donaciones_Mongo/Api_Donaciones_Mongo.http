@@ -1,0 +1,6 @@
+@Api_Donaciones_Mongo_HostAddress = http://localhost:5126
+
+GET {{Api_Donaciones_Mongo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
