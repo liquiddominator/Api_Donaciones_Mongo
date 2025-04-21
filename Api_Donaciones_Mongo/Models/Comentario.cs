@@ -6,7 +6,7 @@ public class Comentario
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; set; } = null;  // Initialize to null for new documents
+    public string? Id { get; set; } = null;
 
     public int UsuarioId { get; set; }
 
