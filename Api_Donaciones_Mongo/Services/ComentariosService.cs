@@ -70,5 +70,10 @@ namespace Api_Donaciones_Mongo.Services
             // Replace the existing document with the new one
             await _context.Comentarios.ReplaceOneAsync(filter, comentario);
         }
+        public async Task<List<Comentario>> GetByDonacionIdAsync(int donacionId)
+        {
+            var filter = Builders<Comentario>.Filter.Eq(c => c.DonacionId, donacionId);
+            return await _context.Comentarios.Find(filter).ToListAsync();
+        }
     }
 }

@@ -83,5 +83,12 @@ namespace Api_Donaciones_Mongo.Controllers
         {
             return await _comentariosService.GetPromedioCalificacionAsync();
         }
+
+        [HttpGet("donacion/{donacionId}")]
+        public async Task<ActionResult<List<Comentario>>> GetByDonacionId(int donacionId)
+        {
+            return await _comentariosService.GetByDonacionIdAsync(donacionId);
+        }
+
     }
 }

@@ -9,6 +9,7 @@ public class Comentario
     public string? Id { get; set; } = null;
 
     public int UsuarioId { get; set; }
+    public int? DonacionId { get; set; }
 
     [Required(ErrorMessage = "El nombre es obligatorio")]
     [StringLength(100, ErrorMessage = "El nombre no puede exceder 100 caracteres")]
